@@ -96,5 +96,5 @@ melt_dataset<- melt(dataset, id.vars = c("subject", "activity_labels"))
 dataset2<-cast(subject + activity_labels ~ variable, data = melt_dataset, fun = mean)
 
 #writing the tidy dataset in txt
-write.table(dataset, file ="./tidy_dataset.txt", row.name=F)
+write.table(dataset2, file ="./tidy_dataset.txt", row.name=F)
 
